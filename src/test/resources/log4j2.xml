@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Configuration status="WARN">
+	
+	<Properties>
+		
+		<Property name="basePath">./logs</Property>
+		
+	</Properties>
+	
+	<Appenders>
+		
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%T] %-5level %logger{36} -%msg%n"></PatternLayout>
+		</Console>
+		
+		<RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"></PatternLayout>
+			<SizeBasedTriggeringPolicy size="5000"/>
+		</RollingFile>
+		
+	</Appenders>
+	
+	<Loggers> 
+		
+		<Root level="Off"><!-- Here you Can use multiple log levels All < Trace < Debug <Info < Warn < Error < Fatal <Off -->
+				<!-- <AppendeRef ref="Console"/> --> //if you specify both console and file then enable this section
+			<AppenderRef ref ="File"/> //In appenders which one will prefer like console or fil that will specify in this appender reference if we want to specify both then also we can specify
+			
+	   </Root>
+	</Loggers>
+	
+</Configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
