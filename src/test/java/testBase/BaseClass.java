@@ -59,7 +59,7 @@ public Properties p;
 				 cap.setPlatform(Platform.MAC);
 			}
 			
-	else  
+   	 else  
 		 {
 		System.out.println("No matchingg os");
 		return;
