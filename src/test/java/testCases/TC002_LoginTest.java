@@ -1,6 +1,6 @@
 package testCases;
 
-import static org.testng.Assert.fail;
+
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -35,7 +35,8 @@ public class TC002_LoginTest extends BaseClass {
 		boolean targetpage=ma.isMyAccountPageExists();
 		//Assert.assertEquals(targetpage, true,"Login failed");
 		
-		Assert.assertTrue(targetpage);
+		Assert.assertTrue(targetpage);//Assert.assertEquals(targetPage, true,"Login failed");
+
 		}
 		catch(Exception e) {
 			Assert.fail();

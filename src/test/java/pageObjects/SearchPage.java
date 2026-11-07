@@ -26,9 +26,11 @@ public class SearchPage extends BasePage {
 		
 		public boolean isProductExist(String productName)
 		{
+			
 			boolean flag=false;
 			for(WebElement product:searchProducts)
-			{				
+			{	
+	
 				if(product.getAttribute("title").equals(productName))
 				{
 				flag=true;
@@ -67,7 +69,8 @@ public class SearchPage extends BasePage {
 		{
 			try
 			{
-			return cnfMsg.isDisplayed();
+				return cnfMsg.isDisplayed();
+
 			}
 			catch(Exception e)
 			{

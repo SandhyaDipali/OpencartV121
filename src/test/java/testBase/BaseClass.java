@@ -40,6 +40,7 @@ public Properties p;
 	    p.load(file);
 		 
 		logger=LogManager.getLogger(this.getClass());
+		
 	  if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 		{		
 			
@@ -48,7 +49,7 @@ public Properties p;
 			
 			if(os.equalsIgnoreCase("windows"))
 			{
-				   cap.setPlatform(Platform.WIN11);
+				   cap.setPlatform(Platform.WINDOWS);
 			}
 			else if(os.equalsIgnoreCase("linux"))
 			{
@@ -123,8 +124,8 @@ public Properties p;
 		return generatednumber;
 	}
 	public String randomAlphaNumber() {
-		String generatedstring=RandomStringUtils.randomAlphabetic(5);
-		String generatednumber=RandomStringUtils.randomNumeric(10);
+		String generatedstring=RandomStringUtils.randomAlphabetic(3);
+		String generatednumber=RandomStringUtils.randomNumeric(3);
 		return (generatedstring+"@"+generatednumber);
 	}
 	public String captureScreen(String tname) throws IOException{

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+
+
 public class CheckoutPage extends BasePage{
 	public CheckoutPage(WebDriver driver)
 	{
@@ -73,8 +75,8 @@ public class CheckoutPage extends BasePage{
 	
 	
 
-	public void setfirstName(String firstName) {
-		txtfirstName.sendKeys(firstName);
+	public void setfirstName(String fname) {
+		txtfirstName.sendKeys(fname);
 	}
 
 

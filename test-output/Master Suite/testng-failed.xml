@@ -13,20 +13,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testCases.TC002_LoginTest">
+      <class name="testCases.TC_006_EndToEndTest">
         <methods>
           <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verify_Login"/>
-        </methods>
-      </class> <!-- testCases.TC002_LoginTest -->
-      <class name="testCases.TC001_AccountRegistarionTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verify_account_resgistration"/>
+          <include name="endToendTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC001_AccountRegistarionTest -->
+      </class> <!-- testCases.TC_006_EndToEndTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Master Suite] -->

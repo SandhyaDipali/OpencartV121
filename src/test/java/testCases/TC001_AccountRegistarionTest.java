@@ -20,7 +20,7 @@ public class TC001_AccountRegistarionTest extends BaseClass {
 	public void verify_account_resgistration() 
 	{
 		logger.info("**** Starting TC001_AccountRegistarionTest **** ");
-		
+		logger.debug("This is a debug log message");
 		try {
 			
 		HomePage hp=new HomePage(driver);
@@ -50,17 +50,20 @@ public class TC001_AccountRegistarionTest extends BaseClass {
 		logger.info("Validating expected message..");
 	
 	String confmsg=regpage.getconfirmmsg();
-		Assert.assertEquals(confmsg,"Your Account Has Been Created!");
+		Assert.assertEquals(confmsg,"Your Account Has Been Created!","Confirmation message mismatch");
+		logger.info("Test passed");
 		}
 		
 		catch(Exception e) {
-			logger.error("your execution having error...");
-			logger.debug("your execution debugging the process...");
-			Assert.fail();
+			logger.error("Test failed: " + e.getMessage());
+			Assert.fail("Test failed: " + e.getMessage());
+
+		
 			
 		}
-		
+		finally {
 		logger.info("**** Finising TC001_AccountRegistarionTest **** ");
+		}
 	}
 	
 	

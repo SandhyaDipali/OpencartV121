@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
+
 public class ShoppingCartPage extends BasePage {
 	public ShoppingCartPage(WebDriver driver)
 	{
@@ -26,10 +27,12 @@ public class ShoppingCartPage extends BasePage {
 	public void clickItemsToNavigateToCart()
 	{
 		btnItems.click();
+		 
 	}
 	
 	public void clickViewCart()
 	{
+		 
 		lnkViewCart.click();
 	}
 	

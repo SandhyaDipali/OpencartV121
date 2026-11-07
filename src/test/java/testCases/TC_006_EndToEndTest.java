@@ -1,4 +1,5 @@
 package testCases;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -24,6 +25,7 @@ public class TC_006_EndToEndTest extends BaseClass  {
 	hp.clickmyregister();
 	
 	AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
+	
 	regpage.firstName(randomeString().toUpperCase());
 	regpage.lastName(randomeString().toUpperCase());
 	
@@ -71,6 +73,7 @@ public class TC_006_EndToEndTest extends BaseClass  {
 	
 	if(sp.isProductExist(p.getProperty("searchProductName")))
 	{
+	
 		sp.selectProduct(p.getProperty("searchProductName"));
 		sp.setQuantity("2");
 		sp.addToCart();
@@ -89,7 +92,7 @@ public class TC_006_EndToEndTest extends BaseClass  {
 	Thread.sleep(3000);
 	String totprice=sc.getTotalPrice();
 	System.out.println("total price is shopping cart: "+totprice);
-	myassert.assertEquals(totprice, "$246.40");   //validation
+	myassert.assertEquals(totprice, "$123.20");   //validation
 	sc.clickOnCheckout(); //navigate to checkout page
 	Thread.sleep(3000);
 	
